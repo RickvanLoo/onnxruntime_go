@@ -175,8 +175,8 @@ OrtStatus *RegisterExecutionProviderLibrary(OrtEnv *env,
   const char *registration_name, char *path);
 
 // Wraps ort_api->RegisterCustomOpsLibraryV2
-OrtStatus *RegisterCustomOpsLibraryV2((OrtSessionOptions *o,
- const char *library_name))
+OrtStatus *RegisterCustomOpsLibraryV2(OrtSessionOptions *o,
+ const char *library_name);
 
 // Wraps ort_api->UnregisterExecutionProviderLibrary
 OrtStatus *UnregisterExecutionProviderLibrary(OrtEnv *env,
