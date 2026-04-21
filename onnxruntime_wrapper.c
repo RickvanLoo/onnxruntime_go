@@ -246,6 +246,12 @@ OrtStatus *UnregisterExecutionProviderLibrary(OrtEnv *env,
   return ort_api->UnregisterExecutionProviderLibrary(env, registration_name);
 }
 
+OrtStatus *RegisterCustomOpsLibraryV2(
+    OrtSessionOptions *o,
+    const char *library_path) {
+    return ort_api->RegisterCustomOpsLibrary_V2(o, library_path);
+}
+
 OrtStatus *CreateArenaCfg(size_t max_mem, int arena_extend_strategy,
   int initial_chunk_size_bytes, int max_dead_bytes_per_chunk,
   OrtArenaCfg **out) {
